@@ -1,4 +1,4 @@
-Header Section
+<h1>Header Section</h1>
 The header section can be found within the <nav> tag and simply contains an unordered list of anchors to different sections of the page.
 
 <nav>
