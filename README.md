@@ -16,7 +16,6 @@ The header section can be found within the <nav> tag and simply contains an unor
 The header main section can be found within the <div> tag and and using .detel class to style the section. 
 
 <div class="detel">
-            <h1>I,M Aarish <span>Ali</span></h1>
 <!--main section content-->
 </div>
   
