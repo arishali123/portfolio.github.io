@@ -1,0 +1,955 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway",sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fdc23417;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+
+.timeline_h1{
+  text-align:center;
+  font-size: 40px;
+  padding: 50px;
+}
+.line_ul {
+  padding: 50px 0;
+}
+
+.line_ul li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: #8e43e7;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.line_ul li::after {
+  background: #8e43e7;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+.line_ul li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42,50,113, .28)!;
+}
+
+.line_ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.line_ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.line_ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.line_ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.line_ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.line_ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .line_ul li div {
+    width: 250px;
+  }
+  .line_ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+
+/*
+second about section
+*/
+.about_column {
+  float: left;
+  width: 14%;
+  padding: 0 10px;
+}
+#about_big{
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+  text-align: justify;
+}
+/* Remove extra left and right margins, due to padding */
+
+/* Clear floats after the columns */
+.about_main{
+  background-color: #fdc2342e;
+  padding: 150px 20px 150px 20px;
+}
+.about_main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .about_column{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  #about_big{
+  width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.icon_img{
+width: 60px;
+height: 60px;
+}
+.about_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #eff4fd;
+  min-height: 190px;
+}
+
+#about_card{
+  box-shadow: none;
+  background-color: transparent;
+}
+.about_card h3{
+  font-family: "Outfit";
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+.about_card h4{
+  font-size: 24px;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.about_card p{
+  font-size: 16px;
+  max-width: 495px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px;
+}
+/*
+third section
+*/
+
+.detel{
+    margin-left: 8%;
+    margin-top: 15%;
+    margin-right: 8%;
+}
+
+.detel h1{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+span{
+    color: #8e43e7;
+    
+}
+
+.detel p{
+    color: #555;
+    line-height: 22px;
+}
+
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .girl{
+    left: 45%;
+}
+
+.social{
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+.social a{
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover{
+    color: orange;
+}
+
+
+/*second*/
+
+hr{border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+.skill_div {
+  width: 100%; 
+  background-color: #ddd; 
+}
+
+.skills {
+  text-align: right; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  color: white; 
+}
+
+.html {width: 90%; background-color: #616161;} 
+.css {width: 80%; background-color: #616161;} 
+.js {width: 65%; background-color: #616161;} 
+.php {width: 60%; background-color: #616161;}
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  /*
+  This is experince tab
+  */
+  .in_title{
+    text-align: center;
+    max-width: 670px;
+    margin: 0px auto 75px;
+  }
+  
+  
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    width: 700px;
+  }
+  
+  .course h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .course h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+  
+  .course-preview {
+    background-color: #8e43e7;
+    color: #fff;
+    padding: 30px;
+    max-width: 250px;
+  }
+  
+  .course-preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+  
+  .course-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .progress-container {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    width: 150px;
+  }
+  
+  .progress {
+    background-color: #2A265F;
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+  }
+  
+  .progress::after {
+    border-radius: 3px;
+    background-color: #2A265F;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 66%;
+  }
+  
+  .progress-text {
+    font-size: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+  
+  .btn_int {
+    background-color: #8e43e7;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 30%;
+    letter-spacing: 1px;
+  }
+  
+  /* SOCIAL PANEL CSS */
+  .social-panel-container {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .social-panel-container.visible {
+    transform: translateX(-10px);
+  }
+  
+  .social-panel {	
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+    border: 5px solid #001F61;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Muli';
+    position: relative;
+    height: 169px;	
+    width: 370px;
+    max-width: calc(100% - 10px);
+  }
+  
+  .social-panel button.close-btn {
+    border: 0;
+    color: #97A5CE;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .social-panel button.close-btn:focus {
+    outline: none;
+  }
+  
+  .social-panel p {
+    background-color: #001F61;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 17px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 235px;
+  }
+  
+  .social-panel p i {
+    margin: 0 5px;
+  }
+  
+  .social-panel p a {
+    color: #FF7500;
+    text-decoration: none;
+  }
+  
+  .social-panel h4 {
+    margin: 20px 0;
+    color: #97A5CE;	
+    font-family: 'Muli';	
+    font-size: 14px;	
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  
+  .social-panel ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-panel ul li {
+    margin: 0 10px;
+  }
+  
+  .social-panel ul li a {
+    border: 1px solid #DCE1F2;
+    border-radius: 50%;
+    color: #001F61;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+  }
+  
+  .social-panel ul li a:hover {
+    border-color: #FF6A00;
+    box-shadow: 0 9px 12px -9px #FF6A00;
+  }
+  
+  .floating-btn {
+    border-radius: 26.5px;
+    background-color: #001F61;
+    border: 1px solid #001F61;
+    box-shadow: 0 16px 22px -17px #03153B;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .floating-btn:hover {
+    background-color: #ffffff;
+    color: #001F61;
+  }
+  
+  .floating-btn:focus {
+    outline: none;
+  }
+  
+  .floating-text {
+    background-color: #001F61;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-family: 'Muli';
+    padding: 7px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 998;
+  }
+  
+  .floating-text a {
+    color: #FF7500;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+    .social-panel-container.visible {
+      transform: translateX(0px);
+    }
+    
+    .floating-btn {
+      right: 10px;
+    }
+  }
+/*
+end of experince tab
+*/
+
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+
+
+
+  /*form*/
+
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #8e43e7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+    /* The Modal (background) */
+  .modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    min-width: 100%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*
+footer area
+*/
+
+.footer-distributed{
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(#fff9ed, white);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 100px 100px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #8e43e7;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+}
+
+.footer-distributed .footer-company-name{
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+  color: #212121;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #8e43e7;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
